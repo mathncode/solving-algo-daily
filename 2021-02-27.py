@@ -20,22 +20,17 @@ def solution(answers):
 
 
     # 높은 점수 받은 사람 찾기
-    if supo1 == supo2 and supo2 == supo3: answer = [1, 2, 3] #1=2=3
-    elif supo1 == supo2:
-        if supo3 > supo2: answer = [3] #1=2<3
-        elif supo3 < supo1: answer = [1, 2] #3<1=2
-    elif supo1 == supo3:
-        if supo2 > supo3: answer = [2] #1=3<2
-        elif supo2 < supo1: answer = [1, 3] #2<1=3
-    elif supo2 == supo3:
-        if supo1 > supo3: answer = [1] #2=3<1
-        elif supo1 < supo2: answer = [2, 3] #1<2=3
-    elif supo1 > supo2:
-        if supo2 > supo3: answer = [1] #3<2<1
-        elif supo3 > supo1: answer = [3] #1<2<3
-    elif supo1 > supo3:
-        if supo2 > supo1: answer = [2] #3<1<2
-        elif supo3 > supo2: answer = [1] #2<3<1
+    if supo1 == supo2 == supo3: answer = [1, 2, 3] #1=2=3
+    elif supo3 > supo2 == supo1: answer = [3] #1=2<3
+    elif supo3 < supo1 == supo2: answer = [1, 2] #3<1=2
+    elif supo2 > supo3 == supo1: answer = [2] #1=3<2
+    elif supo2 < supo1 == supo3: answer = [1, 3] #2<1=3
+    elif supo1 > supo2 == supo3: answer = [1] #2=3<1
+    elif supo1 < supo2 == supo3: answer = [2, 3] #1<2=3
+    elif supo1 > supo2 > supo3: answer = [1] #3<2<1
+    elif supo3 > supo1 > supo2: answer = [3] #1<2<3
+    elif supo2 > supo1 > supo3: answer = [2] #3<1<2
+    elif supo1 > supo3 > supo2: answer = [1] #2<3<1
     elif supo2 > supo3 > supo1: answer = [2] #1<3<2
     elif supo3 > supo2 > supo1: answer = [3] #1<2<3
     
