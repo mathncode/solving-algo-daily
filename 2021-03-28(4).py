@@ -18,7 +18,7 @@ def solution(n, arr1, arr2):
         if len(pw) < n + 2:     # OR 연산 결과가 n자리가 안되면 부족한 자릿수만큼 ' '추가
             for _ in range(n + 2 - len(pw)):
                 t += ' ' 
-        for i in range(2, len(pw)):
+        for i in range(2, len(pw)): # pw는 0b11111 같은 형태의 문자열이므로 3번째 원소부터 가져온다.
             if pw[i] == '1':
                 t += '#'
             else:
